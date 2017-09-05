@@ -2,7 +2,7 @@ module Ratechanger
   class Core
 
     attr_accessor :winner, :looser, :koef
-    
+
     def initialize(winner:, looser:, koef:)
       @winner = winner
       @looser = looser
