@@ -10,7 +10,7 @@ RSpec.describe Ratechanger do
     expect(result.calculate_rating_for_winner).not_to be nil
     expect(result.calculate_rating_for_winner).not_to eq(2000)
     expect(result.calculate_rating_for_winner).to be > 2000
-    expect(result.calculate_rating_for_winner).to eq(2000.5324021520203)
+    expect(result.calculate_rating_for_winner).to eq(2000.532)
 
   end
 
@@ -19,6 +19,6 @@ RSpec.describe Ratechanger do
     expect(result.calculate_rating_for_looser).not_to be nil
     expect(result.calculate_rating_for_looser).not_to eq(1500)
     expect(result.calculate_rating_for_looser).to be < 1500
-    expect(result.calculate_rating_for_looser).to eq(1499.4675978479797)
+    expect(result.calculate_rating_for_looser).to eq(1499.468)
   end
 end

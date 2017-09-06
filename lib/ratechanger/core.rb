@@ -3,18 +3,18 @@ module Ratechanger
 
     attr_accessor :winner, :looser, :koef
 
-    def initialize(winner:, looser:, koef:)
+    def initialize(winner:, looser:, koef: 10)
       @winner = winner
       @looser = looser
       @koef = koef
     end
 
     def calculate_rating_for_winner
-       @winner + @koef * (1 - mat_load_for_winner)
+       (@winner + @koef * (1 - mat_load_for_winner)).round 3
     end
 
     def calculate_rating_for_looser
-      @looser + @koef * (0 - mat_load_for_looser)
+      (@looser + @koef * (0 - mat_load_for_looser)).round 3
     end
 
     private
